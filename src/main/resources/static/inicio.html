@@ -8,7 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Consultorio Dermatológico</title>
-    <link href="assets/img/login.jpg" rel="icon">
+    <link href="assets/img/l.png" rel="icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body id="body-img">
@@ -30,28 +34,31 @@
 <div class="contenedor__login-register" >
     <form action="" class="formulario__login">
         <h2>Iniciar sesión</h2>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
-        <button><a href="index.html"> Iniciar sesión</a></button>
+        <input class=" txtCorreo" id="txtCorreoo" type="email" placeholder="Correo electrónico" required>
+        <input   class="txtPassword" id="txtPasswordd" type="password" placeholder="Contraseña"  required>
+        <button onclick="iniciarSesion()">Iniciar</button>
         <button><a href="index2.html">Volver al inicio</a></button>
 
     </form>
     <form action="" class="formulario__register">
         <h2>Registrarse</h2>
-        <input type="text" placeholder="Nombre(s)" required>
-        <input type="text" placeholder="Apellidos" required>
-        <input type="number" placeholder="Teléfono" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
+        <input type="text" id="txtNombres"  placeholder="Nombre(s)" required>
+        <input type="text" id="txtApellidos" placeholder="Apellidos" required>
+        <input type="number" id="txtTelefono" placeholder="Teléfono" required>
+        <input type="email" id="txtCorreo" placeholder="Correo electrónico" required>
+        <input type="password" id="txtpassword" placeholder="Contraseña" required>
 
-        <button>Registrarse</button>
+        <button onclick="registrarUsuario()">Registrarse</button>
         <button ><a href="index2.html">Volver al inicio</a></button>
     </form>
 
 </div>
 </div>
 </main>
+<!--
 <script src="assets/js/inicio.js"> </script>
+<script src="assets/js/login.js"></script>
+-->
 </body>
 
 </html>

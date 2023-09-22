@@ -8,7 +8,8 @@ import java.awt.print.Pageable;
 import java.util.Optional;
 
 public interface UsuariosService {
-    public Iterable <Usuarios> findAll();
+
+    public Iterable<Usuarios> findAll();
 
     public Page<Usuarios> FindAll(Pageable pageable);
 
@@ -23,4 +24,7 @@ public interface UsuariosService {
     public Usuarios save (Usuarios usuarios);
 
     public void deleteById(Long id);
+
+    public Usuarios findByEmailAndPassword(String email, String password);
+
 }

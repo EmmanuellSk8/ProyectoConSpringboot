@@ -2,19 +2,37 @@ package com.pro.pro.services;
 
 import com.pro.pro.models.Usuarios;
 import com.pro.pro.repository.UsuariosRepository;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class UsuariosServiceImpl implements UsuariosService {
+    @PersistenceContext
+    EntityManager entityManager;
 
     @Autowired
     private UsuariosRepository userRepository;//inyección de dependencias
+
+    public Usuarios obtenerUsuarioPorCredenciales(Usuarios usuarios) {
+        String hql = "FROM Usuarios WHERE email = :email";
+        List<Usuarios> lista = entityManager.createQuery(hql)
+                .setParameter("email", usuarios.getEmail())
+                .getResultList();
+
+
+        if (lista.isEmpty()) {
+            return null;
+        }
+        return lista.get(0);
+    }
 
     @Transactional(readOnly = true)
     public Iterable<Usuarios> findAll() {
@@ -55,4 +73,8 @@ public class UsuariosServiceImpl implements UsuariosService {
         userRepository.deleteById(id);
     }
 
+    @Override
+    public Usuarios findByEmailAndPassword(String email, String password) {
+        throw new UnsupportedOperationException("Unimplemented method 'findByEmailAndPassword'");
+    }
 }

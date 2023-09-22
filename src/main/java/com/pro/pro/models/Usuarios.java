@@ -12,7 +12,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Usuarios  {
+public class Usuarios {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,16 +20,16 @@ public class Usuarios  {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "nombres")
-    private String nombres;
-
-    @Column(name = "apellidos")
-    private String apellidos;
+    @Column(name = "nombre")
+    private String nombre;
 
     @Column(name = "telefono")
     private String telefono;
 
-    @Column(name = "email", nullable = false, length = 50, unique = true)
+    @Column(name = "cedula", nullable = false, length = 15, unique = true)
+    private String cedula;
+
+    @Column(name = "email", nullable = false, length = 100, unique = true)
     private String email;
 
     @Column(name = "password")

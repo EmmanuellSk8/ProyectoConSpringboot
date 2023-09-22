@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <link href="assets/img/l.png" rel="icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+<body> 
+
+<div class="d-flex fixed-top">
+        <div class="div">
+          <div class="holaaaa"><h5><a href="index2.html" style="text-decoration: none"><i class='bx bx-home-alt-2'></i>Volver al inicio</a></h5></div>
+        </div>
+</div>
+<div class="div">
+<div class="container-form hide register">
+    <div class="information">
+        <div class="info-childs">
+            <h2>¡BIENVENIDO!</h2>
+            <P>Para ingresar a consultorio dermatológico, inicia sesión con tus datos</P>
+            <input type="button" value="Inciar sesión" id="Sign-in">
+            <div class=""><a href="index2.html"><input type="button" value="Volver al inicio"></a></div>
+        </div>
+    </div>
+    <div class="form-information">
+        <div class="form-information-childs">
+            <h2>Crear una cuenta</h2>
+            <div class="icons">
+                <i class='bx bxl-google'></i>
+                <i class='bx bxl-linkedin'></i>
+                <i class='bx bxl-github'    ></i>
+            </div>
+            <p>O usa tu correo para registrarse</p>
+
+            <form class="form">
+                <label><i class='bx bx-user' ></i><input type="text" placeholder="Nombre completo" id="txtNombre" required> </label>
+                <label><i class='bx bx-phone' ></i> <input type="text" placeholder="Teléfono" id="txtTelefono" required></label>
+                <label> <i class='bx bx-id-card' ></i><input type="text" placeholder="Cédula" id="txtCedula" required> </label>
+                <label><i class='bx bx-envelope' ></i><input type="email" placeholder="Correo" id="txtCorreoo" required> </label>
+                <label> <i class='bx bx-lock-alt' ></i> <input type="password" id="txtPasswordd" placeholder="Contraseña" required></label>
+
+                <button class="boton" onclick="registrarUsuario()">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-form login">
+    <div class="information">
+        <div class="info-childs">
+            <h2>¡BIENVENIDO NUEVAMENTE!</h2>
+            <P>Para ingresar a consultorio dermatológico, regístrate con tus datos</P>
+            <input type="button" value="Registrarse" id="Sign-up">
+            <div class=""><a href="index2.html"><input type="button" value="Volver al inicio"></a></div>
+
+        </div>
+    </div>
+    <div class="form-information">
+        <div class="form-information-childs">
+            <h2>Iniciar sesión</h2>
+            <div class="icons">
+                <i class='bx bxl-google'></i>
+                <i class='bx bxl-linkedin'></i>
+                <i class='bx bxl-github' ></i>
+            </div>
+            <p>O iniciar sesión con una cuenta</p>
+
+            <form class="form">
+                <label><i class='bx bx-envelope' ></i><input type="email"  placeholder="Correo" id="txtCorreo" required> </label>
+                <label> <i class='bx bx-lock-alt' ></i> <input type="password" id="txtPassword" placeholder="Contraseña" required></label>
+
+
+                <button class="boton" onclick="iniciarSesion()">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<script src="assets/js/login2.js" ></script>
+<script src="assets/js/login.js" ></script>
+<script src="assets/js/register.js" ></script>
+
+</body>
+
+</html>

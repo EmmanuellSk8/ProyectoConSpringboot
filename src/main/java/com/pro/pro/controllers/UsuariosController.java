@@ -1,6 +1,7 @@
 package com.pro.pro.controllers;
 
 import com.pro.pro.models.Usuarios;
+import com.pro.pro.repository.UsuariosRepository;
 import com.pro.pro.services.UsuariosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,10 +18,11 @@ import java.util.stream.StreamSupport;
 public class UsuariosController {
     @Autowired
     private UsuariosService userService;//principio de Inversión de Dependencias (IoD)
+    @Autowired UsuariosRepository usuariosRepository;
 
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody Usuarios user) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
+    public Usuarios createUser(@RequestBody Usuarios user) {
+        return usuariosRepository.save(user);
     }
 
 
@@ -42,9 +44,9 @@ public class UsuariosController {
             return ResponseEntity.notFound().build();
         }
 
-        user.get().setNombres(userDetails.getNombres());
-        user.get().setApellidos(userDetails.getApellidos());
+        user.get().setNombre(userDetails.getNombre());
         user.get().setTelefono(userDetails.getTelefono());
+        user.get().setCedula(userDetails.getCedula());
         user.get().setEmail(userDetails.getEmail());
         user.get().setPassword(userDetails.getPassword());
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user.get()));
