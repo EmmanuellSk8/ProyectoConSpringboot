@@ -220,6 +220,7 @@ h6 {
   border-radius: 98px;
   padding: 8px 25px;
   white-space: nowrap;
+  width: 300px;
   transition: 0.3s;
   font-size: 14px;
   display: inline-block;
@@ -2102,3 +2103,14 @@ section {
   transform: translateY(-20%);
   }
 
+.classdiv{
+  display: flex;
+  width: 420px;
+  height: 1000px;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 0 35px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
