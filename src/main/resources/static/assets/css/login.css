@@ -3,7 +3,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image:url("../img/fon.jpg");
+   background-image:url("../img/fon.jpg");
     background-size: cover;
 
 }

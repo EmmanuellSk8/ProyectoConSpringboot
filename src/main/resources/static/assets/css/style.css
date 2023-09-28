@@ -206,8 +206,13 @@ h6 {
 
 }
 
+.consul{
+  display: flex;
+  float: left;
+ }
 
-.tacos{
+  .tacos{
+
   align-items: center;
   margin-left: 5px;
   background: #3fbbc0;
@@ -2084,4 +2089,16 @@ section {
 
 .derma{
   max-height: 90px;
+  transform: translateX(-25%);
 }
+
+.consulta{
+  transform: translateX(-3%);
+  transform: translateY(-15%);
+}
+
+.juiii{
+  max-height: 50px;
+  transform: translateY(-20%);
+  }
+

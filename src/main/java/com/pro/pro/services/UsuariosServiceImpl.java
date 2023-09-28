@@ -21,10 +21,12 @@ public class UsuariosServiceImpl implements UsuariosService {
     @Autowired
     private UsuariosRepository userRepository;//inyección de dependencias
 
-    public Usuarios obtenerUsuarioPorCredenciales(Usuarios usuarios) {
-        String hql = "FROM Usuarios WHERE email = :email";
+    public Usuarios obtenerUsuarioPorCredenciales(Usuarios usuario) {
+        String hql = "FROM Usuarios WHERE email = :email" +
+                " AND password = :password";
         List<Usuarios> lista = entityManager.createQuery(hql)
-                .setParameter("email", usuarios.getEmail())
+                .setParameter("email", usuario.getEmail())
+                .setParameter("password", usuario.getPassword())
                 .getResultList();
 
 

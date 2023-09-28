@@ -13,15 +13,17 @@ async function iniciarSesion() {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(datos)
+        body : JSON.stringify(datos)
     });
     const respuesta = await request.text();
-    console.log(respuesta)
-    if (respuesta !== "ERROR") {
+    console.log(respuesta);
+
+    if (respuesta === "ENCONTRADO") {
         alert("Usuario Logueado")
-        document.location.href = "index.html";
+        localStorage.email = datos.email;
+        localStorage.password = datos.password;
+        location.href = "index.html";
     } else {
         alert("Usuario o contraseña incorrectos, intente de nuevo");
     }
-
 }
