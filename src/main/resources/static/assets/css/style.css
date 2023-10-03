@@ -1122,7 +1122,9 @@ section {
 }
 
 .dep{
-  padding-left: 140px;
+  transform: translateX(18%);
+  text-align: justify;
+  max-width: 700px;
 }
 .work{
   font-family: "Times New Roman";
@@ -1344,6 +1346,7 @@ section {
 --------------------------------------------------------------*/
 .doctors .member {
   margin-bottom: 20px;
+  margin-left: 60px;
   overflow: hidden;
   text-align: center;
   border-radius: 4px;
@@ -1421,6 +1424,13 @@ section {
   opacity: 1;
 }
 
+.doctors{
+  transform: translateX(-10%);
+}
+
+.doctors section{
+  padding-left: 100px;
+}
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
@@ -2094,6 +2104,7 @@ section {
 }
 
 .consulta{
+
   transform: translateX(-3%);
   transform: translateY(-15%);
 }
@@ -2114,3 +2125,30 @@ section {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
+
+.señoras{
+  transform: translateX(100%);
+}
+.señorasa{
+  transform: translateX(40%);
+}
+
+.row-doctors{
+  transform: translateX(20%)
+}
+
+.contacto{
+padding: 20px;
+}
+
+
+.contactos{
+  margin-right: 45px;
+  transform: translateX(30%);
+
+}
+
+.doctorse{
+  transform: translateX(15%);
+}
+

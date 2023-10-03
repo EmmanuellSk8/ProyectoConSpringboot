@@ -1,11 +1,8 @@
 cargarUsuarios();
 
-/*
 function actualizarEmailDelUsuario() {
     document.getElementById("txt-email-usuario").outerHTML = localStorage.email;
-}}
-
- */
+}
 
 async function cargarUsuarios() {
     try {
@@ -25,6 +22,7 @@ async function cargarUsuarios() {
         alert('Error al cargar los usuarios');
     }
 }
+
 
 
 function getHeaders() {
