@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="utf-8">
@@ -44,33 +44,28 @@
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
-  <div class="juiii">
   <div class="container d-flex align-items-center">
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
         <li><a class="derma" href="#hero"><img src="assets/img/CONSULTORIODERMATOLOGICO_LOGO.png"></a></li>
         <div class="d-flex flex-row consulta">
-        <li><a class="nav-link scrollto " href="#hero"><img src="assets/img/home-color.png">&nbspInicio</a></li>
-        <li><a class="nav-link scrollto" href="#services"><img src="assets/img/services-color%7D.png">&nbspServicios</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials"><img src="assets/img/testi.png">&nbspTestimonios</a></li>
-      <li><a class="nav-link scrollto" href="#contact"><img src="assets/img/contact.png">&nbspContáctenos</a></li>
+          <li><a class="nav-link scrollto " href="#hero"><img src="assets/img/home-color.png">&nbspInicio</a></li>
+          <li><a class="nav-link scrollto" href="#services"><img src="assets/img/services-color%7D.png">&nbspServicios</a></li>
+          <li><a class="nav-link scrollto" href="#contact"><img src="assets/img/contact.png">&nbspContáctenos</a></li>
           <li><a class="nav-link scrollto" href="#ubicacion"><img src="assets/img/location.png">&nbspUbicación</a></li>
+          <li><a href="#testi"><img src="assets/img/testi.png">&nbspTestimonnios</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
 
-      <div class="d-flex flex-row consulta">
-        <div class="señorasa">
-    <a href="login.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Registrarse</span></a>
-    <a href="login.html" class="appointment-btn scrollto" ><span class="d-none d-md-inline">Iniciar Sesión</span></a>
+    <div class="d-flex flex-row consulta">
+      <div class="señorasa">
+        <a href="login.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Registrarse</span></a>
+        <a href="login.html" class="appointment-btn scrollto" ><span class="d-none d-md-inline">Iniciar Sesión</span></a>
       </div>
-  </div>
     </div>
-
-
-
-
+  </div>
 
   </div>
 </header><!-- End Header -->
@@ -81,47 +76,25 @@
 
     <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-    <div class="carousel-inner" role="listbox">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active" style="background-image: url(assets/img/s1.jpg)">
-        <div class="container">
-          <h2>Bienvenido a <span> Consultorio Dermatológico</span></h2>
-          <p>La Dermatología es la especialidad médica que ve además de piel; pelo y uñas.</p>
-          <a href="#faq" class="btn-get-started scrollto">Leer más</a>
+    <div class="thevideo">
+      <video src="assets/img/flip.mp4" height="100%" width="100%" id="myvideo"></video>
+      <div class="txt-cont">
+        <div class="txt-video">
+          <h1>Bienvenido a <span>Consultorio dermatológico</span> </h1>
+          <p>En el siguiente video, podrás ver cómo iniciar sesión.</p>
+          <button onclick="vidPlay()">&#9658;</button>
+          <br>
+          <a href="login.html" class="btn-get-started scrolltoo">Ingresar</a>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item" style="background-image: url(assets/img/s2.jpg)">
-        <div class="container">
-          <h2>Bienvenido a <span> Consultorio Dermatológico </span></h2>
-          <p>La piel es el órgano más extenso de nuestro cuerpo, y debemos cuidarlo no solo por motivos meramente estéticos. Hacerlo es, también, cuestión de salud.</p>
-          <a href="#faq" class="btn-get-started scrollto">Leer más</a>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item" style="background-image: url(assets/img/s3.jpg)">
-        <div class="container">
-          <h2>Bienvenido a <span> Consultorio Dermatológico</span></h2>
-          <p>El dermatólogo es el experto en depilación y siempre te va a decir la verdad como; hasta la fecha ningún tratamiento para depilar es definitivo.</p>
-          <a href="#faq" class="btn-get-started scrollto">Leer más</a>
-        </div>
-      </div>
-
     </div>
 
-    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-    </a>
+   </div>
 
-    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-    </a>
-
-  </div>
 </section><!-- End Hero -->
+
+
+
 
 <main id="main">
 
@@ -140,41 +113,57 @@
       </div>
 
       <div class="row">
-        <div  class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon"><i class="bi-bookmark-check-fill"></i></div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
+          <a href="login.html">
+          <img src="assets/img/laser.png" alt="">
           <h4 class="title"><a href="#departments">Depilación con láser</a></h4>
-         </div>
+      </a>
+        </div>
 
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon"><i class="bi-bookmark-check-fill"></i></div>
+          <a href="login.html">
+          <img src="assets/img/celuli.png">
           <h4 class="title"><a href="#departments">Reducción de celulitis</a></h4>
-          </div>
+          </a>
+         </div>
+
 
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon"><i class="bi-bookmark-check-fill"></i></div>
+          <a href="login.html">
+          <img src="assets/img/eliminacion.png">
           <h4 class="title"><a href="#departments">Eliminación de tatuajes</a></h4>
+          </a>
          </div>
 
+
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon"><i class="bi-bookmark-check-fill"></i></div>
+          <a href="login.html">
+          <img src="assets/img/anti-arrugas.png">
           <h4 class="title"><a href="#departments">Láser y tratamientos antiarrugas con luz pulsada</a></h4>
-          </div>
+          </a>
+         </div>
+
 
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon"><i class="bi-bookmark-check-fill"></i></div>
+          <a href="login.html">
+          <img src="assets/img/manchas.png">
           <h4 class="title"><a href="#departments">Correción de manchas con crioterapia</a></h4>
-        </div>
+          </a>
+         </div>
+
 
         <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon"><i class="bi-bookmark-check-fill"></i></div>
+          <a href="login.html">
+          <img src="assets/img/botox.png">
           <h4 class="title"><a href="#departments">Tratamiento de ácido hialurónico</a></h4>
-        </div>
+          </a>
+         </div>
       </div>
-    </div>
-  </section><!-- End Services Section -->
 
 
-  <section id="testimonials" class="testimonials">
+
+
+  <section id="testi" class="testimonials">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -188,26 +177,28 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                "Mi experiencia en el Centro Dermatológico fue excepcional. El equipo médico me trató con amabilidad y profesionalismo. Gracias a sus cuidados, mi piel ha mejorado significativamente. ¡Los recomiendo ampliamente
+                Quiero agradecer al Centro Dermatológico por su increíble ayuda. Encontré una solución a largo plazo para mis problemas de piel y estoy emocionado con los resultados. El personal es amable y comprometido con la salud de sus pacientes.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-
               </p>
               <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
+              <h3>Juan Pérez</h3>
+              <h4> Ingeniero de Software</h4>
             </div>
           </div><!-- End testimonial item -->
 
+
           <div class="swiper-slide">
             <div class="testimonial-item">
+              <div class="testimonio">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Estoy muy agradecido con el Centro Dermatológico por resolver mi problema de acné. El tratamiento que me dieron fue efectivo y el personal siempre fue atento y dispuesto a responder mis preguntas. ¡Son los mejores!
+                Estoy muy agradecida con el Centro Dermatológico por resolver mi problema de acné. El tratamiento que me dieron fue efectivo y el personal siempre fue atento y dispuesto a responder mis preguntas. ¡Son los mejores!
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
+              <h3>María González</h3>
+              <h4>Diseñadora gráfica</h4>
+            </div>
             </div>
           </div><!-- End testimonial item -->
 
@@ -215,12 +206,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                El Centro Dermatológico cambió mi vida. Después de años luchando contra la psoriasis, finalmente encontré alivio gracias a su tratamiento. El equipo médico es compasivo y experto. ¡Los recomendaría a cualquiera¡
+                No puedo expresar cuánto aprecio al Centro Dermatológico. Gracias a ellos, mis alergias cutáneas son cosa del pasado. Su enfoque individualizado y experiencia me han devuelto la confianza en mi piel.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
+              <h3>Laura Martínez</h3>
+              <h4>Abogada</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -228,12 +219,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                El Centro Dermatológico es el lugar donde finalmente encontré una solución para mis problemas de alergias cutáneas. El personal me escuchó con atención y diseñó un plan de tratamiento que ha funcionado maravillosamente. ¡Estoy agradecida por su dedicación y experiencia!
+                El Centro Dermatológico ha sido un verdadero salvavidas para mí. Su atención personalizada y tratamiento efectivo han aliviado mis problemas de piel. Estoy agradecido por su dedicación y profesionalismo.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
+              <h3>Carlos Rodríguez</h3>
+              <h4>Chef</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -241,12 +232,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Jamás pensé que podría deshacerme de esas manchas en mi piel, pero el Centro Dermatológico hizo que fuera posible. Su tecnología de vanguardia y su atención personalizada hicieron que me sintiera en buenas manos desde el principio. ¡Gracias por devolverme la confianza!
+                Después de años buscando respuestas para mis problemas de piel, finalmente encontré la solución en el Centro Dermatológico. Su equipo profesional diseñó un tratamiento que ha transformado mi vida. ¡Gracias por su compromiso y experiencia!
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
+              <h3>Andrés López</h3>
+              <h4>Arquitecto</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -272,39 +263,52 @@
     <div>
       <iframe style="border:0; width: 100%; height: 350px;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9433.857419781405!2d-75.58307490241101!3d6.20442442454004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46827f7a881345%3A0xdf94c4d13c76ebb!2sInstituci%C3%B3n%20Educativa%20Inem%20Jos%C3%A9%20F%C3%A9lix%20de%20Restrepo!5e0!3m2!1ses!2sco!4v1667312575372!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-<section id="contact" class="contact">
-    <div class="container">
+  </section>
+    <section id="contact" class="contact">
+      <div  class="container">
 
-      <div class="row mt-5">
+        <div class="row mt-5">
 
-        <div class="col-lg-6">
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>Nuestra dirección</h3>
-                <p> Cra. 48 #1-125, Medellín, El Poblado, Medellín, Antioquia</p>
-              </div>
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h2>Contáctenos</h2>
             </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-envelope"></i>
-                <h3>Nuestro correo email </h3>
-                <p> consultoriodermatologico.e.j.e@gmail.com</p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class='bx bx-network-chart'></i>
+                  <h3>Redes sociales</h3>
+                  <br>
+                  <a href="https://twitter.com/ConsultorioDer2" class="twitter  contacto"><i class="bx bxl-twitter contacto"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100087007223254" class="facebook contacto"><i class="bx bxl-facebook"></i></a>
+                  <a href="https://www.instagram.com/dermatologico_e.j.e/" class="instagram contacto"><i class="bx bxl-instagram"></i></a>
+                  <br>
+                  <div class="d-flex flex-row contactos">
+                    <p class="icon1"><strong> Twitter</strong></p>
+                    <p class="icon2"><strong>Facebook</strong></p>
+                    <p class="icon3"><strong>Instagram</strong></p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-phone-call"></i>
-                <h3>Llámanos</h3>
-                <p>+57 301-314-3273</p>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Nuestro correo email </h3>
+                  <p><strong> consultoriodermatologico.e.j.e@gmail.com</strong></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Llámanos</h3>
+                  <p><strong>+57 301-314-3273</strong></p>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-
+      </div>
+    </section>
 </main><!-- End #main -->
 <!-- ======= Footer ======= -->
     <footer id="footer">
