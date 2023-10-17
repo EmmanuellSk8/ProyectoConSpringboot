@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Inicio </title>
+    <title>Pedir cita </title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -50,16 +50,18 @@
 
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="nav-link scrollto" href="index.html"><img src="assets/img/inic.png">&nbspInicio</a></li>
-                <li><a class="nav-link scrollto" href="cita2.html"><img src="assets/img/cancelar.png">&nbspCancelar &nbspcita </a></li>
+                <li><a class="nav-link scrollto" href="index.html"><img src="assets/img/home-color.png">&nbspInicio</a></li>
+                <li><a class="nav-link scrollto" href="reprogramarCita.html"><img src="assets/img/reprogramarCita.png">&nbspReprogramar &nbspcita </a></li>
+                <li><a class="nav-link scrollto" href="cita2.html"><img src="assets/img/cancelarcita.png">&nbspCancelar &nbspcita </a></li>
+
             </ul>
 
         </nav><!-- .navbar -->
 
-        <div class="aaa"><a href="index.html" class="appointment-btn scrollto"><span class="d">Volver atrás</span></a></div>
-        <div class="ddd"><a href="index2.html" class="appointment-btn scrollt" ><span class="a">Cerrar sesión</span></a></div>
-
-
+        <div class="d-flex flex-row citas">
+        <a href="index.html" class="appointment-btn scrollto"><span class="d">Volver atrás</span></a>
+        <a href="index2.html" class="appointment-btn scrollt" ><span class="a">Cerrar sesión</span></a>
+        </div>
 
     </div>
 </header><!-- End Header -->
@@ -75,34 +77,27 @@
             <br>
 
             <div class="section-title">
-
-
                 <h2>Pida su cita</h2>
                 <br>
                 <p>Recuerde presentarse con 30 minutos de antelación el día de su cita.</p>
             </div>
+                <div class="d-flex flex-column">
+
             <br>
-            <form action="forms/appointment.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-                <div class="row">
-                    <div class="col-md-4 form-group">
+                <form>
+                    <div class="d-flex flex-row">
 
-                        <input class="classdiv" type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <input  class="classdiv" type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <input  class="classdiv" type="tel" class="form-control" name="phone" id="phone" placeholder="Número celular" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 form-group mt-3">
-                        <input class="classdiv" type="date" name="date" class="form-control datepicker" id="date" placeholder="Fecha de su cita" required>
+                    <input type="text" class="selectCitas" placeholder="Nombre">
+                    <input type="text" class="selectCitas" placeholder="Correo electrónico">
+                    <input type="text" class="selectCitas" placeholder="Cédula">
 
                     </div>
-                    <div class=" col-md-4 form-group mt-3">
-                        <select name="department" id="department" class="classdiv">
-                            <option value="">Seleccionar especialidad</option>
+                    <div class="d-flex flex-row">
+
+                    <input type="datetime-local" class="selectCitas" placeholder="Fecha deseada para la cita">
+
+                        <select name="department" id="department" class="selectCitas">
+                            <option hidden >Seleccionar especialidad</option>
                             <option value="Department 1">Depilación con láser</option>
                             <option value="Department 2">Reducción de celulitis</option>
                             <option value="Department 3">Eliminación de tatuajes</option>
@@ -110,35 +105,19 @@
                             <option value="Department 5">Correción de manchas con crioterapia</option>
                             <option value="Department 6">Tratamiento de ácido hialurónico</option>
                         </select>
-                    </div>
+                    <select class="selectCitas">
+                        <option hidden>Seleccionar doctor</option>
+                        <option value="Doctor 1">Emmanuel Guerra</option>
+                        <option value="Doctor 2">Juan David Guarín</option>
+                        <option value="Doctor 4">Juan Miguel Duarte</option>
 
-                    <div class="col-md-4 form-group mt-3">
-                        <select name="doctor" id="doctor" class="classdiv">
-                            <option value="">Seleccionar doctor</option>
-                            <option value="Doctor 1">Emmanuel Guerra</option>
-                            <option value="Doctor 2">Juan David Guarín</option>
-                            <option value="Doctor 4">Juan Miguel Duarte</option>
-
-                        </select>
-
-                    </div>
+                    </select>
                 </div>
-
-
-                <div class="my-3">
-                    <div class="loading">Cargando...</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Su solicitud de cita ha sido enviada con éxito. Gracias!</div>
+                </form>
                 </div>
-                <div class="oh">
-                    <a href="" class="tacos" id="tacos" ><span class="tacos">Pedir cita</span></a>
-                </div>
-            </form>
-
         </div>
-    </section><!-- End Appointment Section -->
+    </section>
 
-        <!-- ======= Footer ======= -->
         <footer id="footer">
             <div class="footer-top">
                 <div class="container">

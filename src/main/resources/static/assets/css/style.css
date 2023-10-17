@@ -2260,3 +2260,31 @@ padding: 20px;
 .itemm{
   transform: translateX(40%);
 }
+
+.tratamien7os{
+    transform: translate(32%, -300%);
+}
+
+.imglogo{
+  position: absolute;
+max-width: 500px;
+  transform: translate(810px, 200px);
+}
+
+.selectCitas{
+margin: 10px;
+ width: 800px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: solid 1px black;
+}
+
+.selectCitas:hover{
+    background-color: #f6f6f6;
+}
+
+.citas{
+  transform: translateX(155%);
+}
+

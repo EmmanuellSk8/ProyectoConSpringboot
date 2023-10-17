@@ -13,7 +13,9 @@ async function cargarUsuarios() {
         let listadoHtml = '';
         for (let usuario of usuarios) {
             let usuarioHtml = '<tr><td>' + usuario.nombre + '</td><td>' + usuario.telefono + '</td><td>' +
-                usuario.cedula + '</td><td>' + usuario.email + '</td><td>' + usuario.password + '</td><td>';
+                usuario.cedula + '</td><td>' + usuario.email + '</td><td>' + usuario.password + '</td><td>' +
+                '<button class="btn btn-danger" onclick="eliminarUsuario(' + usuario.id + ')"><button>A</button></button>';
+
             listadoHtml += usuarioHtml;
         }
 

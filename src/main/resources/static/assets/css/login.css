@@ -176,6 +176,13 @@ body{
     padding: 10px 15px;
     margin-top: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    text-decoration-line: none;
+}
+
+.boton:hover{
+background-color: #00b3ff;
+    text-decoration-line: none;
+    color: black;
 }
 
 .boton-login{
