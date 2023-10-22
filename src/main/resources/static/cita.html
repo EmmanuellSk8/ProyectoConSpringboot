@@ -87,33 +87,36 @@
                 <form>
                     <div class="d-flex flex-row">
 
-                    <input type="text" class="selectCitas" placeholder="Nombre">
-                    <input type="text" class="selectCitas" placeholder="Correo electrónico">
-                    <input type="text" class="selectCitas" placeholder="Cédula">
+                    <input id="txtNombre" type="text" class="selectCitas" placeholder="Nombre">
+                    <input id="txtEmail" type="text" class="selectCitas" placeholder="Correo electrónico">
+                    <input id="txtCedula" type="text" class="selectCitas" placeholder="Cédula">
 
                     </div>
                     <div class="d-flex flex-row">
 
-                    <input type="datetime-local" class="selectCitas" placeholder="Fecha deseada para la cita">
+                    <input id="txtFecha" type="datetime-local" class="selectCitas" placeholder="Fecha deseada para la cita">
 
-                        <select name="department" id="department" class="selectCitas">
+                        <select name="department" id="txtEspecialidad" class="selectCitas">
                             <option hidden >Seleccionar especialidad</option>
-                            <option value="Department 1">Depilación con láser</option>
-                            <option value="Department 2">Reducción de celulitis</option>
-                            <option value="Department 3">Eliminación de tatuajes</option>
-                            <option value="Department 4">Láser y tratamientos antiarrugas con luz pulsada</option>
-                            <option value="Department 5">Correción de manchas con crioterapia</option>
-                            <option value="Department 6">Tratamiento de ácido hialurónico</option>
+                            <option value="Depilación con láser">Depilación con láser</option>
+                            <option value="Reducción de celulitis">Reducción de celulitis</option>
+                            <option value="Eliminación de tatuajes">Eliminación de tatuajes</option>
+                            <option value="Láser y tratamientos antiarrugas con luz pulsada">Láser y tratamientos antiarrugas con luz pulsada</option>
+                            <option value="Correción de manchas con crioterapia">Correción de manchas con crioterapia</option>
+                            <option value="Tratamiento de ácido hialurónico">Tratamiento de ácido hialurónico</option>
                         </select>
-                    <select class="selectCitas">
+                    <select id="txtDoctor" class="selectCitas">
                         <option hidden>Seleccionar doctor</option>
-                        <option value="Doctor 1">Emmanuel Guerra</option>
-                        <option value="Doctor 2">Juan David Guarín</option>
-                        <option value="Doctor 4">Juan Miguel Duarte</option>
+                        <option value="Emmanuel Guerra">Emmanuel Guerra</option>
+                        <option value="Juan David Guarín">Juan David Guarín</option>
+                        <option value="Juan Miguel Duarte<">Juan Miguel Duarte</option>
 
                     </select>
                 </div>
                 </form>
+                    <a href="cita.html">
+                    <button class="boton" onclick="registrarCita()">Pedir cita</button>
+                    </a>
                 </div>
         </div>
     </section>
@@ -169,6 +172,8 @@
 
         <div id="preloader"></div>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <script src="assets/js/cita.js"></script>
 
         <!-- Vendor JS Files -->
         <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -14,7 +14,7 @@ async function cargarUsuarios() {
         for (let usuario of usuarios) {
             let usuarioHtml = '<tr><td>' + usuario.nombre + '</td><td>' + usuario.telefono + '</td><td>' +
                 usuario.cedula + '</td><td>' + usuario.email + '</td><td>' + usuario.password + '</td><td>' +
-                '<button class="btn btn-danger" onclick="eliminarUsuario(' + usuario.id + ')"><button>A</button></button>';
+                '<button class="bi bi-trash" onclick="eliminarUsuario(' + usuario.id + ')"></button>' + " " + '<button class="fas fa-edit" onclick="editarUsuario(' + usuario.id + ')"></button>';
 
             listadoHtml += usuarioHtml;
         }
@@ -62,7 +62,7 @@ async function eliminarUsuario(id) {
                 'Tu usuario ha sido eliminado.',
                 'success'
             )
-            await fetch('api/delUsuario/' + id, {
+            await fetch('api/usuarios/' + id, {
                 method: 'DELETE',
                 headers: getHeaders()
             });
@@ -89,7 +89,7 @@ async function buscarUsuario() {
 
 async function editarUsuario(id) {
     // obtener información del usuario
-    const request = await fetch('api/getUsuario/' + id, {
+    const request = await fetch('api/usuarios/' + id, {
         method: 'GET',
         headers: getHeaders()
     });
@@ -100,12 +100,14 @@ async function editarUsuario(id) {
         html:
             '<label for="swal-input1">Nombre: &#160</label>' +
             '<input id="swal-input1" class="swal2-input" placeholder="Nombre" value="' + usuario.nombre + '">' +
-            '<label for="swal-input2">Apellido:</label>' +
-            '<input id="swal-input2" class="swal2-input" placeholder="Apellido" value="' + usuario.apellido + '">' +
-            '<label for="swal-input3">Email:&#160 &#160 &#160</label>' +
-            '<input id="swal-input3" class="swal2-input" placeholder="Email" value="' + usuario.email + '">' +
-            '<label for="swal-input4">Teléfono:</label>' +
-            '<input id="swal-input4" class="swal2-input" placeholder="Teléfono" value="' + (usuario.telefono || '') + '">',
+            '<label for="swal-input3">Cedula: &#160 </label>' +
+            '<input id="swal-input3" class="swal2-input" placeholder="Cedula" value="' + usuario.cedula + '">' +
+            '<label for="swal-input4">Email:&#160 &#160 &#160</label>' +
+            '<input id="swal-input4" class="swal2-input" placeholder="Email" value="' + usuario.email + '">' +
+            '<label for="swal-input5">Teléfono:</label>' +
+            '<input id="swal-input5" class="swal2-input" placeholder="Teléfono" value="' + (usuario.telefono || '') + '">' +
+            '<label for="swal-input6">Contraseña:</label>' +
+            '<input id="swal-input6" class="swal2-input" placeholder="Contraseña" value="' + (usuario.password || '') + '">',
         focusConfirm: false,
         showCancelButton: true,
         confirmButtonText: 'Guardar',
@@ -115,19 +117,21 @@ async function editarUsuario(id) {
 
     if (formValues) {
         const nombre = document.getElementById("swal-input1").value;
-        const apellido = document.getElementById("swal-input2").value;
-        const email = document.getElementById("swal-input3").value;
-        const telefono = document.getElementById("swal-input4").value;
+        const cedula = document.getElementById("swal-input3").value;
+        const email = document.getElementById("swal-input4").value;
+        const telefono = document.getElementById("swal-input5").value;
+        const password = document.getElementById("swal-input6").value;
 
         const nuevoUsuario = {
             nombre,
-            apellido,
+            cedula,
             email,
-            telefono
+            telefono,
+            password
         };
 
         // actualizar usuario
-        const response = await fetch('api/editUsuarios/' + usuario.id, {
+        const response = await fetch('api/usuarios/' + usuario.id, {
             method: 'PUT',
             headers: getHeaders(),
             body: JSON.stringify(nuevoUsuario)

@@ -288,3 +288,21 @@ theVideo.onended = function(){
   theVideo.load();
   theVideo.controls = false;
 };
+const video = document.getElementById('myvideo');
+const header = document.getElementById('header');
+const textContent = document.querySelector('.txt-video');
+
+function vidPlay() {
+  if (video.paused) {
+    video.play();
+    header.style.display = 'none';
+    textContent.style.display = 'none';
+  } else {
+    video.pause();
+  }
+}
+
+video.onended = function() {
+  header.style.display = 'block';
+  textContent.style.display = 'block';
+};

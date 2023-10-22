@@ -2631,7 +2631,7 @@ a.btn.disabled, fieldset:disabled a.btn {
     border-color: #ca2819
 }
 
-.btn-danger:not(:disabled):not(.disabled).active:focus, .btn-danger:not(:disabled):not(.disabled):active:focus, .show > .btn-danger.dropdown-toggle:focus {
+.btn-danger:not(:disabled):not(.disabled).active:focus, .tn-danger:not(:disabled):not(.disabled):active:focus, .show > .btn-danger.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(235, 101, 88, .5)
 }
 
