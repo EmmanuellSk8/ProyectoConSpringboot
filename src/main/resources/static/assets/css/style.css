@@ -1,13 +1,4 @@
-/**
-* Template Name: Medicio - v4.9.1
-* Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -1975,6 +1966,7 @@ section {
   transform: translate(500px, 20px);
 }
 
+
 .boton:hover{
   background-color: #3dd5f3;
   color: white;
@@ -2300,4 +2292,51 @@ margin: 10px;
 
 .parrafo{
   color: #0d6efd;
+}
+
+.botonEditar{
+  font-size: 25px;
+  position: absolute;
+  transform: translate(20px, -7px);
+}
+
+
+.botonBorrar{
+  height: 10px;
+  width: 15px;
+  font-size: 20px;
+  position: absolute;
+  transform: translate(100px, -6px);
+}
+
+
+.posicionTexto{
+  position: absolute;
+  transform: translate(700px, -10px);
+}
+
+.posicionVideo{
+  position: absolute;
+  transform: translate(-120px, 100px);
+  width: 750px;
+}
+
+.about{
+  height: 950px;
+}
+
+.botonCitaVideo{
+background-color: #06ccfa;
+  border-radius: 10px;
+  color: white;
+  padding:10px;
+}
+
+.botonCitaVideo:hover{
+  background-color: #0a90b7;
+  color: black;
+}
+
+.botonReproducir{
+  margin-bottom:30px;
 }

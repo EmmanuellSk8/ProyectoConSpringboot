@@ -101,8 +101,6 @@
 
           <div class="carousel-inner" role="listbox">
 
-
-            
             <!-- Slide 1 -->
             <div class="carousel-item active" style="background-image: url(assets/img/eli.jpg)">
               <div class="container">
@@ -196,15 +194,28 @@
         <section id="about" class="about">
           <div class="container" data-aos="fade-up">
 
+
             <div class="section-title">
               <h2 align="center">Acerca de nosotros</h2>
               <p align="justify">Se necesita un gran esfuerzo y dedicación para cuidar tu piel. Conocemos las necesidades de tu piel y lo que le ayuda a que conste de excelente salud. Cualquiera a quien cualquiera desee, puede iniciar su tratamiento ya, ¿qué estás esperando?.</p>
             </div>
-
-            <div class="row">
               <div class="col-lg-6" data-aos="fade-right">
-                <img align="justify" src="assets/img/logo3.png" class="img-fluid" alt="">
+                <div class="posicionVideo">
+                <div class="thevideo">
+                  <video  class="zoom" src="assets/img/2023-10-21%2023-33-16.mkv" height="100%" width="100%" id="myvideo" poster="assets/img/posterVideo.png"></video>
+                  <div class="txt-cont ">
+                    <div class="txt-video">
+                      <p style="color: white; font-size: 25px">En el siguiente video, podrás ver cómo pedir una cita.</p>
+                      <button class="botonReproducir" onclick="vidPlay()">&#9658;</button>
+                      <br>
+                      <a href="cita.html" class="botonCitaVideo">Pedir cita</a>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div class="posicionTexto">
               <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
                 <h3 align="center">Se requiere gran valor para iniciar una decisión que cambiará tu vida.</h3>
                 <br>
@@ -213,19 +224,22 @@
                   <li><i class="bi bi-check-circle"></i><strong>Nuestra misión</strong> es hacer de este sitio web una aplicación funcional adaptable a cualquier consultorio dermatológico del Valle de Aburrá que desee exponer sus servicios y agilizar los procedimientos que involucren el tratamiento de datos y la solicitud de servicios requeridos por los usuarios.Hacer de este sitio web una aplicación funcional adaptable a cualquier consultorio dermatológico del Valle de Aburrá que desee exponer sus servicios y agilizar los procedimientos que involucren el tratamiento de datos y la solicitud de servicios requeridos por los usuarios.</li>
                   <li><i class="bi bi-check-circle"></i><strong>Nuestra visión</strong> es Para las etapas finales de 2023 habremos cumplido los objetivos propuestos antes y durante el desarrollo de este sitio web, por lo tanto esperamos que esta aplicación cumpla con los requerimientos necesarios para ser lanzada en la web web.</li>
                   </div>
+                  </ul>
+                  <ul>
                   <p><h4 align="center">Nuestros principios y valores</h4></p>
                   <div align="justify">
                   <li><i class="bi bi-check-circle"><strong>Accesibilidad:</strong> Garantía de que la aplicación sea accesible para todas las personas, incluyendo aquellas con dificultades, mediante el proporciomiento del manual de usuario </i></li>
                   <li><i class="bi bi-check-circle"><strong>Confidencialidad:</strong> Respeto y protección de la privacidad de la información de los pacientes y la confidencialidad de los datos médicos.</i></li>
                   <li><i class="bi bi-check-circle"><strong>Transparencia:</strong> Mantenimiento de una comunicación abierta y transparente con los usuarios y la entidad, brindando información clara sobre el funcionamiento de la aplicación.</i></li>
                   </div>
-                </ul>
 
+                </ul>
+              </div>
               </div>
             </div>
-
-          </div>
-        </section><!-- End About Us Section -->
+            </div>
+            </div>
+        </section>
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts">
@@ -235,7 +249,7 @@
              <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch align-items-center">
                 <div class="count-box" >
                   <i class="fas fa-user-md"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
 
                   <p align="justify"><strong>Médicos,</strong> Ellos se enfocan de darle lo mejor a tu piel</p>
                   <a href="#">Saber más &raquo;</a>
@@ -268,17 +282,10 @@
                 </div>
               </div>
 
-
-              
-
             </div>
-
           </div>
-        </section><!-- End Counts Section -->
+        </section>
 
-
-      </div>
-    </section><!-- End Features Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services services">
@@ -646,7 +653,7 @@
                     <i class='bx bx-network-chart'></i>
                     <h3>Redes sociales</h3>
                     <br>
-                    <a href="https://twitter.com/ConsultorioDer2" class="twitter  contacto"><i class="bx bxl-twitter contacto"></i></a>
+                   <a href="https://twitter.com/ConsultorioDer2" class="twitter  contacto"><i class="bx bxl-twitter contacto"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100087007223254" class="facebook contacto"><i class="bx bxl-facebook"></i></a>
                     <a href="https://www.instagram.com/dermatologico_e.j.e/" class="instagram contacto"><i class="bx bxl-instagram"></i></a>
                     <br>
@@ -816,5 +823,6 @@
 
       <!-- Template Main JS File -->
       <script src="assets/js/main.js"></script>
+        <script src="assets/js/videoDuracion.js"></script>
     </body>
     </html>
