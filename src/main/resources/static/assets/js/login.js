@@ -27,3 +27,28 @@ async function iniciarSesion() {
         alert("Usuario o contraseña incorrectos, intente de nuevo");
     }
 }
+function togglePasswordVisibility() {
+    var passwordField = document.getElementById("txtPassword");
+    var passwordToggle = document.querySelector(".password-toggle");
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        passwordToggle.innerHTML = "<i class='bx bx-hide'></i>"; // Cambia el ícono a ojo cerrado
+    } else {
+        passwordField.type = "password";
+        passwordToggle.innerHTML = "<i class='bx bx-show'></i>"; // Cambia el ícono a ojo abierto
+    }
+}
+
+function togglePassworddVisibility() {
+    var passwordField = document.getElementById("txtPasswordd");
+    var passwordToggle = document.querySelector(".password-toggle");
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        passwordToggle.innerHTML = "<i class='bx bx-hide'></i>"; // Cambia el ícono a ojo cerrado
+    } else {
+        passwordField.type = "password";
+        passwordToggle.innerHTML = "<i class='bx bx-show'></i>"; // Cambia el ícono a ojo abierto
+    }
+}

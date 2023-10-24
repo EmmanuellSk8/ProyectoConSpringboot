@@ -11,18 +11,18 @@ async function cargarCitas() {
 
         const citas = await request.json();
         let listadoHtml = '';
-        for (let usuario of citas) {
-            let citaHtml = '<tr><td>' + usuario.nombre + '</td><td>' + usuario.email + '</td><td>' + usuario.cedula + '</td><td>' +
-                usuario.fecha + '</td><td>' + usuario.especialidad + '</td><td>' + usuario.doctor + '</td><td>' +
-                '<div class="botonBorrar"><button class="bi bi-trash" onclick="eliminarUsuario(' + usuario.id + ')"></button></div>'
-                + " " + ' <div class="botonEditar"><button class="fas fa-edit " onclick="editarUsuario(' + usuario.id + ')"></button></div> ';
+        for (let cita of citas) {
+            let citaHtml = '<tr><td>' + cita.nombre + '</td><td>' + cita.email + '</td><td>' + cita.cedula + '</td><td>' +
+                cita.fecha + '</td><td>' + cita.especialidad + '</td><td>' + cita.doctor + '</td><td>' +
+                ' <div class="botonBorrarCita"><button class="bi bi-trash" onclick="eliminarCita(' + cita.id + ')"></button></div>'
+                + " " + ' <div class="botonEditarCita"><button class="fas fa-edit " onclick="editarCita(' + cita.id + ')"></button></div> ';
 
             listadoHtml += citaHtml;
         }
 
         document.querySelector("#citas tbody").outerHTML = listadoHtml;
     } catch (error) {
-        alert('Error al cargar las citas');
+        console.log("error al cargar las citas: " + error);
     }
 }
 
@@ -100,17 +100,23 @@ async function editarCita(id) {
         title: 'Editar cita',
         html:
             '<label for="swal-input1">Nombre: &#160</label>' +
-            '<input id="swal-input1" class="swal2-input" placeholder="Nombre" value="' + usuario.nombre + '">' +
-            '<label for="swal-input2">correo electrónico: &#160 </label>' +
-            '<input id="swal-input2" class="swal2-input" placeholder="email" value="' + usuario.email + '">' +
-            '<label for="swal-input3">Email:&#160 &#160 &#160</label>' +
-            '<input id="swal-input3" class="swal2-input" placeholder="cedula" value="' + usuario.cedula + '">' +
-            '<label for="swal-input4">fecha: &#160 </label>' +
-            '<input id="swal-input4" class="swal2-input" placeholder="fecha" value="' + usuario.fecha + '">' +
+            '<input id="swal-input1" class="swal2-input" placeholder="Nombre" value="' + cita.nombre + '">' +
+
+            '<label for="swal-input2">Email: &#160 &#160 &#160</label>' +
+            '<input id="swal-input2" class="swal2-input" placeholder="email" value="' + cita.email + '">' +
+
+            '<label for="swal-input3">Cédula: &#160</label>' +
+            '<input id="swal-input3" class="swal2-input" placeholder="cedula" value="' + cita.cedula + '">' +
+
+            '<label for="swal-input4">fecha: &#160  &#160</label>' +
+            '<input id="swal-input4" class="swal2-input" placeholder="fecha" value="' + cita.fecha + '">' +
+
             '<label for="swal-input5">Especialidad:</label>' +
-            '<input id="swal-input5" class="swal2-input" placeholder="especialidad" value="' + (usuario.especialidad || '') + '">' +
+            '<input id="swal-input5" class="swal2-input" placeholder="especialidad" value="' + (cita.especialidad || '') + '">' +
+
             '<label for="swal-input6">doctor:</label>' +
-            '<input id="swal-input6" class="swal2-input" placeholder="doctor" value="' + (usuario.doctor || '') + '">',
+            '<input id="swal-input6" class="swal2-input" placeholder="doctor" value="' + (cita.doctor || '') + '">',
+
         focusConfirm: false,
         showCancelButton: true,
         confirmButtonText: 'Guardar',
@@ -120,7 +126,7 @@ async function editarCita(id) {
 
     if (formValues) {
         const nombre = document.getElementById("swal-input1").value;
-        const email = document.getElementById("swal-input3").value;
+        const email = document.getElementById("swal-input2").value;
         const cedula = document.getElementById("swal-input3").value;
         const fecha = document.getElementById("swal-input4").value;
         const especialidad = document.getElementById("swal-input5").value;
@@ -136,7 +142,7 @@ async function editarCita(id) {
         };
 
         // actualizar usuario
-        const response = await fetch('api/citas/' + usuario.id, {
+        const response = await fetch('api/citas/' + cita.id, {
             method: 'PUT',
             headers: getHeaders(),
             body: JSON.stringify(nuevoCita)

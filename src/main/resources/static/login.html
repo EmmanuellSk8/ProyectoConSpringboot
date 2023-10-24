@@ -38,7 +38,11 @@
                 <label><i class='bx bx-phone' ></i> <input type="text" placeholder="Teléfono" id="txtTelefono" required></label>
                 <label> <i class='bx bx-id-card' ></i><input type="text" placeholder="Cédula" id="txtCedula" required> </label>
                 <label><i class='bx bx-envelope' ></i><input type="email" placeholder="Correo" id="txtCorreoo" required> </label>
-                <label> <i class='bx bx-lock-alt' ></i> <input type="password" id="txtPasswordd" placeholder="Contraseña" required></label>
+                <label>
+                    <i class='bx bx-lock-alt' ></i>
+                    <input type="password" id="txtPasswordd" placeholder="Contraseña" required>
+                    <span class="password-toggle" onclick="togglePassworddVisibility()"><i class="bx bx-show"></i></span>
+                </label>
 
                 <button class="boton" onclick="registrarUsuario()">Registrarse</button>
             </form>
@@ -69,7 +73,11 @@
 
             <form class="form">
                 <label><i class='bx bx-envelope' ></i><input type="email"  placeholder="Correo" id="txtCorreo" required> </label>
-                <label> <i class='bx bx-lock-alt' ></i> <input type="password" id="txtPassword" placeholder="Contraseña" required></label>
+                <label>
+                    <i class='bx bx-lock-alt' ></i>
+                    <input type="password" id="txtPassword" placeholder="Contraseña" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="bx bx-show"></i></span>
+                </label>
 
                 <a class="boton" onclick="iniciarSesion()" href="#" type="submit">Iniciar sesión</a>
             </form>

@@ -13,7 +13,6 @@ public class CitasController {
 
     @Autowired
     private CitasRepository citasRepository;
-
     @PostMapping
     public Citas createCita(@RequestBody Citas cita) {
         return citasRepository.save(cita);

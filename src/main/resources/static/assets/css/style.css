@@ -2340,3 +2340,21 @@ background-color: #06ccfa;
 .botonReproducir{
   margin-bottom:30px;
 }
+
+.botonEditarCita{
+  font-size: 26px;
+  position: absolute;
+  transform: translate(10px, -8px);
+}
+
+.botonBorrarCita{
+  height: 10px;
+  width: 15px;
+  font-size: 20px;
+  position: absolute;
+  transform: translate(73px, -6px);
+}
+
+.estilos{
+  color: black;
+}
